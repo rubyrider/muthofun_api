@@ -7,7 +7,6 @@ RSpec.describe MuthofunApi::Configuration do
       @configuration.client_id  = 'your username'
       @configuration.secret_key = 'your password'
       @configuration.originator = 'your originator'
-      @configuration.mobiles    = '8801766678130'
 
       expect(@configuration.client_id).to eq('your username')
       expect(@configuration.client_id).not_to be_nil
