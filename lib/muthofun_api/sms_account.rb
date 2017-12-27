@@ -11,8 +11,6 @@ module MuthofunApi
       
       yield(@result) if block_given? && @result.success?
       
-      pp @result
-      
       @result
       
     rescue => e
@@ -35,7 +33,6 @@ module MuthofunApi
         req.params['password'] = MuthofunApi.configuration.secret_key
         req.params['unicode']  = 1
         req.params.merge!(params)
-        pp req.params
       end
       
       @response = response.body.gsub(/[\r\n\t]+/m, "").strip

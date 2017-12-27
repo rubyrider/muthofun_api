@@ -56,6 +56,7 @@ But if you want to do something when sms is sent successfully you can use a bloc
 
 ```ruby
 a = MuthofunApi::SmsAccount.send_sms('8801766678130', 'Hello Bidhu from Irfan') do |result|
+  # Only executes when sending sms is successful!
   pp result.output
   pp result.success?
   pp result.failed?
